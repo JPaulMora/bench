@@ -78,15 +78,15 @@ These commands belong directly to the bench group so they can be invoked directl
  - **disable-production**: Disables production environment for the bench.
  - **renew-lets-encrypt**: Renew Let's Encrypt certificate for site SSL.
  - **backup**: Backup single site data. Can be used to backup files as well.
- - **backup-all-sites**: Backup all sites in current bench.
+ - **backup-all-sites**: Backup all sites in current bench. Does not support backing up local files.
 
  - **get-app**: Download an app from the internet or filesystem and set it up in your bench. This clones the git repo of the Frappe project and installs it in the bench environment.
  - **remove-app**: Completely remove app from bench and re-build assets if not installed on any site.
  - **exclude-app**: Exclude app from updating during a `bench update`
  - **include-app**: Include app for updating. All Frappe applications are included by default when installed.
- - **remote-set-url**: Set app remote url
- - **remote-reset-url**: Reset app remote url to frappe official
- - **remote-urls**: Show apps remote url
+ - **remote-set-url**: Set app remote url. Must be run within the bench root folder.
+ - **remote-reset-url**: Reset app remote url to frappe official. Must be run within the bench root folder.
+ - **remote-urls**: Show apps remote url. Must be run within the bench root folder.
  - **switch-to-branch**: Switch all apps to specified branch, or specify apps separated by space
  - **switch-to-develop**: Switch Frappe and ERPNext to develop branch
 
